@@ -1,0 +1,10 @@
+{
+  "name": "kpmg.app.app",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+  }
+}

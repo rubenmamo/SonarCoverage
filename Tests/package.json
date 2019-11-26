@@ -1,0 +1,21 @@
+{
+  "name": "kpmg.app.unittest",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmin": "0.0.2",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^2.0.1",
+    "karma-coverage-istanbul-reporter": "^2.1.1",
+    "karma-edge-launcher": "^0.4.2",
+    "karma-istanbul": "0.0.2",
+    "karma-jasmine": "^2.0.1",
+    "karma-junit-reporter": "^1.2.0",
+    "karma-ng-html2js-preprocessor": "^1.0.0",
+    "karma-spec-reporter": "0.0.32"
+  }
+}

@@ -1,0 +1,80 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool:
+  name: 'windows-latest'
+
+steps:
+- task: NuGetToolInstaller@0
+  inputs:
+    versionSpec: '>=5' 
+    checkLatest: true
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+    
+- task: NodeTool@0 
+  inputs:
+    versionSpec: 8.x
+
+- task: CmdLine@2
+  inputs:
+    script: 'npm install -g karma-cli'
+
+- task: CmdLine@2
+  inputs:
+    script: 'npm install'
+    workingDirectory: App
+
+- task: CmdLine@2
+  inputs:
+    script: 'npm install'
+    workingDirectory: Tests
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'Sonar Cloud'
+    organization: 'rubenmamo'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'TestCoverageCLI'
+    cliProjectName: 'TestCoverageCLI'
+    cliSources: '.'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.verbose=true
+      sonar.javascript.lcov.reportPaths=Tests/reports/coverage/lcov.info
+      
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    vsVersion: '16.0'
+    
+- task: CmdLine@2
+  inputs:
+    script: 'karma start karma-devops.conf.js'
+    workingDirectory: Tests
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TESTS-*.xml'
+    mergeTestResults: true
+
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
+
