@@ -43,8 +43,8 @@ steps:
     organization: 'rubenmamo'
     scannerMode: 'CLI'
     configMode: 'manual'
-    cliProjectKey: 'TestCoverageCLI'
-    cliProjectName: 'TestCoverageCLI'
+    cliProjectKey: 'RubenMamoTestCoverageCLI'
+    cliProjectName: 'RubenMamoTestCoverageCLI'
     cliSources: '.'
     extraProperties: |
       # Additional properties that will be passed to the scanner, 

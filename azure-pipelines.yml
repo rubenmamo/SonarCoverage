@@ -47,8 +47,8 @@ steps:
     SonarCloud: 'Sonar Cloud'
     organization: 'rubenmamo'
     scannerMode: 'MSBuild'
-    projectKey: 'TestCoverage'
-    projectName: 'TestCoverage'
+    projectKey: 'RubenMamoTestCoverageMSBUILD'
+    projectName: 'RubenMamoTestCoverageMSBUILD'
     extraProperties: |
       # Additional properties that will be passed to the scanner, 
       # Put one key=value per line, example:
