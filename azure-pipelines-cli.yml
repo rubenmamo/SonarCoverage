@@ -52,14 +52,6 @@ steps:
       # sonar.exclusions=**/*.bin
       sonar.verbose=true
       sonar.javascript.lcov.reportPaths=Tests/reports/coverage/lcov.info
-      
-- task: VSBuild@1
-  inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-    vsVersion: '16.0'
     
 - task: CmdLine@2
   inputs:
