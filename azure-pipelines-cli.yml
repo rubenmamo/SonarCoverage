@@ -53,7 +53,7 @@ steps:
       sonar.verbose=true
       sonar.javascript.lcov.reportPaths=**/lcov.info
       
-- task: VSBuild@1g
+- task: VSBuild@1
   inputs:
     solution: '$(solution)'
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
