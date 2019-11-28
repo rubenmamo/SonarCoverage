@@ -58,6 +58,17 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     vsVersion: '16.0'
+
+- task: VSTest@2
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: '**\bin\**\*Tests.dll'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    vsTestVersion: 'toolsInstaller'
+    otherConsoleOptions: '/Framework:.NETCoreApp,Version=v2.2'
+    codeCoverageEnabled: true
     
 - task: CmdLine@2
   inputs:
