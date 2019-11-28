@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <Folder Include="reports\coverage\lcov-report\" />
+    <Folder Include="reports\report-html\" />
+    <Folder Include="reports\report-lcov\lcov-report\" />
   </ItemGroup>
 
   <ItemGroup>

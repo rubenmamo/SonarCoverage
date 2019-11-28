@@ -36,6 +36,9 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'npm install -g karma-cli'
+- task: CmdLine@2
+  inputs:
+    script: 'npm install -g @angular/cli'
 
 - task: CmdLine@2
   inputs:
@@ -54,7 +57,7 @@ steps:
       # Put one key=value per line, example:
       # sonar.exclusions=**/*.bin
       sonar.verbose=true
-      sonar.javascript.lcov.reportPaths=SampleWebApp.Tests/reports/coverage/lcov.info
+      sonar.javascript.lcov.reportPaths=SampleAngularApp/ClientApp/coverage/lcov.info
       
 - task: VSBuild@1
   inputs:
@@ -79,6 +82,11 @@ steps:
   inputs:
     script: 'karma start karma-devops.conf.js'
     workingDirectory: SampleWebApp.Tests
+    
+- task: CmdLine@2
+  inputs:
+    script: 'ng test'
+    workingDirectory: SampleAngularApp\ClientApp
 
 - task: PublishTestResults@2
   inputs:

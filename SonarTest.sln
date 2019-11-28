@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWebApp", "SampleWebApp\SampleWebApp.csproj", "{DBA59751-D172-4748-AB60-11B630DB8BDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleWebApp", "SampleWebApp\SampleWebApp.csproj", "{DBA59751-D172-4748-AB60-11B630DB8BDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWebApp.Tests", "SampleWebApp.Tests\SampleWebApp.Tests.csproj", "{FEED4CCB-B049-4ED9-A812-F45621D644C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleWebApp.Tests", "SampleWebApp.Tests\SampleWebApp.Tests.csproj", "{FEED4CCB-B049-4ED9-A812-F45621D644C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAngularApp", "SampleAngularApp\SampleAngularApp.csproj", "{F814D435-5450-4E98-B163-830D490A7218}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,18 @@ Global
 		{FEED4CCB-B049-4ED9-A812-F45621D644C6}.Release|x64.Build.0 = Release|Any CPU
 		{FEED4CCB-B049-4ED9-A812-F45621D644C6}.Release|x86.ActiveCfg = Release|Any CPU
 		{FEED4CCB-B049-4ED9-A812-F45621D644C6}.Release|x86.Build.0 = Release|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Debug|x64.Build.0 = Debug|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Debug|x86.Build.0 = Debug|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Release|x64.ActiveCfg = Release|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Release|x64.Build.0 = Release|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Release|x86.ActiveCfg = Release|Any CPU
+		{F814D435-5450-4E98-B163-830D490A7218}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
