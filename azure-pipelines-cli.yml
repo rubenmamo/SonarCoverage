@@ -30,12 +30,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'npm install'
-    workingDirectory: App
-
-- task: CmdLine@2
-  inputs:
-    script: 'npm install'
-    workingDirectory: Tests
+    workingDirectory: SampleWebApp.Tests
 
 - task: SonarCloudPrepare@1
   inputs:
@@ -51,7 +46,7 @@ steps:
       # Put one key=value per line, example:
       # sonar.exclusions=**/*.bin
       sonar.verbose=true
-      sonar.javascript.lcov.reportPaths=Tests/reports/coverage/lcov.info
+      sonar.javascript.lcov.reportPaths=**/lcov.info
       
 - task: VSBuild@1
   inputs:
@@ -64,7 +59,7 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'karma start karma-devops.conf.js'
-    workingDirectory: Tests
+    workingDirectory: SampleWebApp.Tests
 
 - task: PublishTestResults@2
   inputs:
