@@ -38,7 +38,7 @@ steps:
     script: 'npm install -g karma-cli'
 - task: CmdLine@2
   inputs:
-    script: 'npm install -g @angular/cli'
+    script: 'npm install -g @angular/cli@6.0.0'
 
 - task: CmdLine@2
   inputs:
