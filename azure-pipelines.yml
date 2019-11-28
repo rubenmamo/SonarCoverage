@@ -76,7 +76,7 @@ steps:
     configuration: '$(buildConfiguration)'
     vsTestVersion: 'toolsInstaller'
     otherConsoleOptions: '/Framework:.NETCoreApp,Version=v2.2'
-    codeCoverageEnabled: true
+    codeCoverageEnabled: false
     
 - task: CmdLine@2
   inputs:
