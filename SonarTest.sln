@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleWebApp", "SampleWebAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleWebApp.Tests", "SampleWebApp.Tests\SampleWebApp.Tests.csproj", "{FEED4CCB-B049-4ED9-A812-F45621D644C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleAngularApp", "SampleAngularApp\SampleAngularApp.csproj", "{F814D435-5450-4E98-B163-830D490A7218}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
