@@ -57,7 +57,7 @@ steps:
       # Put one key=value per line, example:
       # sonar.exclusions=**/*.bin
       sonar.verbose=true
-      sonar.javascript.lcov.reportPaths=SampleAngularApp/ClientApp/coverage/lcov.info
+      sonar.javascript.lcov.reportPaths=../SampleWebApp.Tests/reports/coverage/lcov.info
       
 - task: VSBuild@1
   inputs:
